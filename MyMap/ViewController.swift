@@ -72,5 +72,26 @@ class ViewController: UIViewController,UITextFieldDelegate {
         //デフォルト操作を行うので、trueを返す（４）
         return true
     }
+    
+    
+    @IBAction func chageMapButton(_ sender: Any) {
+        
+        //mapTypeプロパティー値をトグル
+        //標準　→　航空写真　→　航空写真＋標準
+        //　→　３D Flyover →　３D　Flyover＋標準
+        //　→　交通機関
+        if dispMap.mapType == .standard {
+            dispMap.mapType = .satellite
+        } else if dispMap.mapType == .satellite{
+            dispMap.mapType = .hybrid
+        } else if dispMap.mapType == .hybrid{
+            dispMap.mapType = .satelliteFlyover
+        } else if dispMap.mapType == .satelliteFlyover{
+            dispMap.mapType = .hybridFlyover
+        } else if  dispMap.mapType == .hybridFlyover{
+            dispMap.mapType = .mutedStandard
+        } else {
+            dispMap.mapType = .standard
+    }
+  }
 }
-

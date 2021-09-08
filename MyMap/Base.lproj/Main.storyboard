@@ -27,14 +27,22 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="a0X-Pf-vgl">
                                 <rect key="frame" x="0.0" y="78" width="414" height="784"/>
                             </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ee8-lL-Frl">
+                                <rect key="frame" x="378" y="834" width="20" height="20"/>
+                                <connections>
+                                    <action selector="chageMapButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xDf-e1-cyw"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="a0X-Pf-vgl" firstAttribute="top" secondItem="fUQ-JZ-nJG" secondAttribute="bottom" id="8kd-V1-7Do"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="a0X-Pf-vgl" secondAttribute="bottom" id="DAB-yR-0M5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ee8-lL-Frl" secondAttribute="bottom" constant="8" id="Ev1-aV-12A"/>
                             <constraint firstItem="fUQ-JZ-nJG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="OfP-mq-I25"/>
                             <constraint firstItem="a0X-Pf-vgl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Tf5-xB-HPy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ee8-lL-Frl" secondAttribute="trailing" constant="16" id="WZy-6q-Z8o"/>
                             <constraint firstItem="fUQ-JZ-nJG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gwW-M0-Vtz"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="a0X-Pf-vgl" secondAttribute="trailing" id="kDA-yI-5gg"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fUQ-JZ-nJG" secondAttribute="trailing" id="phe-y0-WgE"/>
