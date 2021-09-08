@@ -17,7 +17,6 @@ class ViewController: UIViewController,UITextFieldDelegate {
         super.viewDidLoad()
         
         inputText.delegate = self
-        
     }
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         //キーボードを閉じる（１）
@@ -32,8 +31,8 @@ class ViewController: UIViewController,UITextFieldDelegate {
         //入力された文字から位置情報を取得（５）
         let geodcoder = CLGeocoder()
             
-        ////入力された文字から位置情報を取得（６）
-            geodcoder.geocodeAddressString(searchKey, completionHandler: { (placemarks,error) in
+        //入力された文字から位置情報を取得（６）
+        geodcoder.geocodeAddressString(searchKey, completionHandler: { (placemarks,error) in
                 
                 //位置情報が存在する場合は、unwrapPlacemarksを取り出す（７）
                 if let unwrapPlacemarks = placemarks {
@@ -67,13 +66,11 @@ class ViewController: UIViewController,UITextFieldDelegate {
                     }
                   }
                 }
-        })
-    }
+           })
+       }
         //デフォルト操作を行うので、trueを返す（４）
         return true
     }
-    
-    
     @IBAction func chageMapButton(_ sender: Any) {
         
         //mapTypeプロパティー値をトグル
