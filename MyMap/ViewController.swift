@@ -49,12 +49,27 @@ class ViewController: UIViewController,UITextFieldDelegate {
                             
                             //緯度経度をデバックエリアに表示（１１）
                             print(targetCoordinate)
-                        
+                            
+                            //MKPointAnnotationインスタンスを取得し、ピンを生成（１２）
+                            let pin = MKPointAnnotation()
+                            
+                            //ピンを置く緯度経度を設定（１３）
+                            pin.coordinate = targetCoordinate
+                            
+                            //ピンを設定（１４）
+                            pin.title = searchKey
+                            
+                            //ピンを地図に置く
+                            self.dispMap.addAnnotation(pin)
+                            
+                            //緯度経度を中心にして、半径500mの範囲を表示（１６）
+                            self.dispMap.region = MKCoordinateRegion(center: targetCoordinate , latitudinalMeters: 500.0, longitudinalMeters: 500.0)
                     }
                   }
                 }
         })
     }
+        //デフォルト操作を行うので、trueを返す（４）
         return true
     }
 }
